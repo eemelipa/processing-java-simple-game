@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Configuration status="info">
+    <Appenders>
+        <Console name="Console" target="SYSTEM_OUT">
+            <PatternLayout>
+                <Pattern>%d{DEFAULT}{UTC} | %-5level | %t | %logger | %msg %exception %n</Pattern>
+            </PatternLayout>
+        </Console>
+<!--        <CloudWatchAppender name="CloudWatchAppender">-->
+<!--            <PatternLayout>-->
+<!--                <Pattern>%d{DEFAULT}{UTC} | %-5level | %t | %logger | %msg %exception %n</Pattern>-->
+<!--            </PatternLayout>-->
+<!--        </CloudWatchAppender>-->
+        <!--<RollingFile name="RollingFile" fileName="../logs/miner.log"-->
+        <!--filePattern="../logs/log-%d{MM-dd-yyyy}-%i.log.gz">-->
+        <!--<PatternLayout pattern="%d{DEFAULT}{UTC} %-5level [%t] %logger - %msg%n"/>-->
+        <!--<Policies>-->
+        <!--<TimeBasedTriggeringPolicy/>-->
+        <!--<SizeBasedTriggeringPolicy size="250 MB"/>-->
+        <!--</Policies>-->
+        <!--<DefaultRolloverStrategy max="20"/>-->
+        <!--</RollingFile>-->
+    </Appenders>
+    <Loggers>
+        <!--<Logger name="connector" level="debug" additivity="false">-->
+        <!--<AppenderRef ref="Console"/>-->
+        <!--</Logger>-->
+        <!--<Logger name="miners" level="debug" additivity="false">-->
+        <!--<AppenderRef ref="Console"/>-->
+        <!--</Logger>-->
+        <Root level="info">
+            <AppenderRef ref="Console"/>
+            <!--<AppenderRef ref="RollingFile"/>-->
+        </Root>
+    </Loggers>
+</Configuration>
